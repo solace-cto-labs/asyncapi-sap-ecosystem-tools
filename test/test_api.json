@@ -1,0 +1,316 @@
+{
+    "components":
+    {
+        "schemas":
+        {
+            "Z_MARM_TEST":
+            {
+                "x-ep-schema-version": "1.0.0",
+                "x-ep-schema-version-id": "ed00cueu2w8",
+                "$schema": "http://json-schema.org/draft-07/schema",
+                "description": "Description.",
+                "x-ep-schema-state-name": "RELEASED",
+                "x-ep-schema-name": "Z_MARM_TEST",
+                "title": "Z_MARM_TEST",
+                "type": "object",
+                "x-ep-application-domain-id": "82z4evtb5rl",
+                "x-ep-schema-version-displayname": "Z_MARM_TEST",
+                "x-ep-shared": "true",
+                "x-ep-application-domain-name": "asapio/assets",
+                "x-ep-schema-state-id": "2",
+                "x-ep-schema-id": "xdb83l4vlty",
+                "properties":
+                {
+                    "MARA":
+                    {
+                        "type": "array",
+                        "items":
+                        {
+                            "type": "object",
+                            "properties":
+                            {
+                                "LAEDA":
+                                {
+                                    "description": "Date of Last Change",
+                                    "type": "string",
+                                    "maxLength": 10
+                                },
+                                "MANDT":
+                                {
+                                    "description": "Client",
+                                    "type": "string",
+                                    "maxLength": 3
+                                },
+                                "STFAK":
+                                {
+                                    "description": "Stacking factor",
+                                    "type": "string",
+                                    "maxLength": 5
+                                },
+                                "MTART":
+                                {
+                                    "description": "Material Type",
+                                    "type": "string",
+                                    "maxLength": 4
+                                },
+                                "MATKL":
+                                {
+                                    "description": "Material Group",
+                                    "type": "string",
+                                    "maxLength": 9
+                                },
+                                "MEINS":
+                                {
+                                    "description": "Base Unit of Measure",
+                                    "type": "string",
+                                    "maxLength": 3
+                                },
+                                "MAKT":
+                                {
+                                    "type": "array",
+                                    "items":
+                                    {
+                                        "type": "object",
+                                        "properties":
+                                        {
+                                            "SPRAS":
+                                            {
+                                                "description": "Language Key",
+                                                "type": "string",
+                                                "maxLength": 2
+                                            },
+                                            "MAKTX":
+                                            {
+                                                "description": "Material Description (Short Text)",
+                                                "type": "string",
+                                                "maxLength": 40
+                                            },
+                                            "MARM":
+                                            {
+                                                "type": "array",
+                                                "items":
+                                                {
+                                                    "type": "object",
+                                                    "properties":
+                                                    {
+                                                        "HOEHE":
+                                                        {
+                                                            "description": "Height",
+                                                            "type": "number",
+                                                            "maxLength": 17
+                                                        },
+                                                        "UMREN":
+                                                        {
+                                                            "description": "Denominator for conversion to base units of measure",
+                                                            "type": "number",
+                                                            "maxLength": 6
+                                                        },
+                                                        "BRGEW":
+                                                        {
+                                                            "description": "Gross Weight",
+                                                            "type": "number",
+                                                            "maxLength": 17
+                                                        },
+                                                        "GEWEI":
+                                                        {
+                                                            "description": "Weight Unit",
+                                                            "type": "string",
+                                                            "maxLength": 3
+                                                        },
+                                                        "MEINH":
+                                                        {
+                                                            "description": "Alternative Unit of Measure for Stockkeeping Unit",
+                                                            "type": "string",
+                                                            "maxLength": 3
+                                                        },
+                                                        "BREIT":
+                                                        {
+                                                            "description": "Width",
+                                                            "type": "number",
+                                                            "maxLength": 17
+                                                        },
+                                                        "EAN11":
+                                                        {
+                                                            "description": "International Article Number (EAN/UPC)",
+                                                            "type": "string",
+                                                            "maxLength": 18
+                                                        },
+                                                        "UMREZ":
+                                                        {
+                                                            "description": "Numerator for Conversion to Base Units of Measure",
+                                                            "type": "number",
+                                                            "maxLength": 6
+                                                        }
+                                                    },
+                                                    "required":
+                                                    [
+                                                        "Alt. Unit"
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "required":
+                                        [
+                                            "Language"
+                                        ]
+                                    }
+                                },
+                                "MATNR":
+                                {
+                                    "description": "Material Number",
+                                    "type": "string",
+                                    "maxLength": 18
+                                },
+                                "ERNAM":
+                                {
+                                    "description": "Name of Person who Created the Object",
+                                    "type": "string",
+                                    "maxLength": 12
+                                }
+                            },
+                            "required":
+                            [
+                                "Client",
+                                "Material"
+                            ]
+                        }
+                    }
+                },
+                "$id": "http://example.com/example.json"
+            }
+        },
+        "messages":
+        {
+            "MATERIAL_CHANGE_UOM":
+            {
+                "x-ep-event-id": "7br5af3y8sx",
+                "x-ep-custom-attr-PUBLISH_DESTINATIONS": "ep-developer-portal",
+                "x-ep-event-version-displayname": "MATERIAL_CHANGE_UOM",
+                "description": "",
+                "x-ep-application-domain-id": "82z4evtb5rl",
+                "schemaFormat": "application/vnd.aai.asyncapi+json;version=2.0.0",
+                "x-ep-event-state-name": "RELEASED",
+                "x-ep-shared": "true",
+                "x-ep-application-domain-name": "asapio/assets",
+                "x-ep-event-version-id": "8mhxix0ylmm",
+                "payload":
+                {
+                    "$ref": "#/components/schemas/Z_MARM_TEST"
+                },
+                "x-ep-event-version": "1.0.0",
+                "x-ep-event-name": "MATERIAL_CHANGE_UOM",
+                "contentType": "application/json",
+                "x-ep-event-state-id": "2"
+            }
+        }
+    },
+    "servers":
+    {
+        "apim-gw-dev-smf":
+        {
+            "protocol": "smf",
+            "protocolVersion": "1.0.0",
+            "url": "tcp://mr-connection-6mdexb3glmb.messaging.solace.cloud:55555",
+            "bindings": {
+            	"solace": {
+            		"msgVpn": "default"
+            	}            	
+            }
+        },
+        "apim-gw-dev-smfs":
+        {
+            "protocol": "smfs",
+            "protocolVersion": "1.0.0",
+            "url": "tcp://mr-connection-6mdexb3glmb.messaging.solace.cloud:55443",
+            "bindings": {
+            	"solace": {
+            		"msgVpn": "default"
+            	}
+            }
+        }
+    },
+    "channels":
+    {
+        "sap_demo/BUS1001/sap-bo-data/update/json/v1/asadev/{MATERIAL_TYPE}/ERD100/{REFERENCE}":
+        {
+            "publish":
+            {
+                "bindings":
+                {
+                    "rest":
+                    {
+                        "method": "POST",
+                        "type": "request",
+                        "bindingVersion": "0.1.0"
+                    },
+                    "mqtt":
+                    {
+                        "qos": 1,
+                        "bindingVersion": "0.1.0"
+                    },
+                    "solace":
+                    {
+                        "destinations":
+                        [
+                            {
+                                "destinationType": "queue",
+                                "queue":
+                                {
+                                    "accessType": "exclusive",
+                                    "maxTtl": "1",
+                                    "maxMsgSpoolUsage": "1",
+                                    "topicSubscriptions":
+                                    []
+                                }
+                            }
+                        ],
+                        "bindingVersion": "0.3.0"
+                    }
+                },
+                "message":
+                {
+                    "$ref": "#/components/messages/MATERIAL_CHANGE_UOM"
+                }
+            },
+            "parameters":
+            {
+                "MATERIAL_TYPE":
+                {
+                    "schema":
+                    {
+                        "type": "string"
+                    },
+                    "x-ep-parameter-name": "MATERIAL_TYPE"
+                },
+                "REFERENCE":
+                {
+                    "schema":
+                    {
+                        "type": "string"
+                    },
+                    "x-ep-parameter-name": "REFERENCE"
+                }
+            }
+        }
+    },
+    "asyncapi": "2.5.0",
+    "info":
+    {
+        "x-ep-event-api-product-version-id": "lvigq32r1kn",
+        "x-ep-event-api-id": "h96388c6tk3",
+        "x-ep-event-api-product-version": "1.1.0",
+        "description": "Material",
+        "x-ep-state-name": "RELEASED",
+        "title": "Material",
+        "x-ep-application-domain-id": "bpgli1jzier",
+        "version": "1.0.0",
+        "x-ep-event-api-product-id": "2c701co0a4f",
+        "x-ep-event-api-version-id": "pp6qtfm3jgw",
+        "x-ep-application-domain-name": "asapio/consumers",
+        "x-ep-shared": "true",
+        "x-ep-event-api-version": "1.0.0",
+        "x-ep-event-api-product-name": "Asapio Material",
+        "x-ep-displayname": "Material",
+        "x-ep-state-id": "2"
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/model/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
+  "include": ["typings.d.ts", "server/**/*.ts", "src/**/*.ts", "tools/**/*.ts", "*.ts"],
+  "exclude": ["node_modules"]
+}

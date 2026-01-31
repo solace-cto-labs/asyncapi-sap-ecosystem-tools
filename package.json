@@ -1,0 +1,44 @@
+{
+  "name": "asyncapi-sap-ecosystem-tools",
+  "version": "0.1.0",
+  "description": "asyncapi-sap-ecosystem-tools",
+  "homepage": "https://github.com/solace-cto-labs/asyncapi-sap-ecosystem-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solace-cto-labs/asyncapi-sap-ecosystem-tools"
+  },
+  "bugs": {
+    "url": "https://github.com/solace-cto-labs/asyncapi-sap-ecosystem-tools/issues"
+  },
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "ts-node ./index.ts"
+  },
+  "author": "Solace Corporation",
+  "contributors": [
+    {
+      "name": "Swen-Helge Huber",
+      "email": "swen-helge.huber@solace.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.3",
+    "dotenv": "^17.2.3",
+    "js-yaml": "^4.1.1",
+    "lodash": "^4.17.23"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/lodash": "^4.17.20",
+    "@types/node": "^24.10.1",
+    "@types/node-fetch": "^2.6.13",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^9.38.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
