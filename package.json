@@ -11,9 +11,13 @@
     "url": "https://github.com/solace-cto-labs/asyncapi-sap-ecosystem-tools/issues"
   },
   "scripts": {
-    "start": "node dist/src/index.js",
+    "build": "tsc",
+    "prepublishOnly": "node prepublish.js && tsc",
+    "release": "cross-env RELEASE_MODE=true np --no-tests",
+    "start": "node dist/index.js",
     "dev": "ts-node ./index.ts"
   },
+  "bin": "./dist/index.js",
   "author": "Solace Corporation",
   "contributors": [
     {
@@ -35,9 +39,11 @@
     "@types/node-fetch": "^2.6.13",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
+    "cross-env": "^10.1.0",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "np": "^11.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
