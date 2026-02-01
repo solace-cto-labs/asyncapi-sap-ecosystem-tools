@@ -17,6 +17,9 @@
     "start": "node dist/index.js",
     "dev": "ts-node ./index.ts"
   },
+  "publishConfig": {
+  	"access": "public"
+  },
   "bin": "./dist/index.js",
   "author": "Solace Corporation",
   "contributors": [
